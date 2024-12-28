@@ -1,5 +1,6 @@
 <img src="https://i.ibb.co/SVg9Hmh/image.jpg" alt="banner">
-<h1 align="center"><img src="https://i.ibb.co/SVg9Hmh/image.jpg" width="22px"> Telegram Bot V1</h1>
+<h1 align="center"><img src="![received_1106676897823577](https://github.com/user-attachments/assets/c25d3249-5962-4126-92b4-347e874b7bf5)
+" width="22px"> Telegram Bot V1</h1>
 
 ### Telegram Bot V1
 dossier pour les Bots télégram version 1 créer par <a href="https://www.facebook.com/profile.php?id=100084606198768" target="_blank">RONALD SORY ホ</a>
