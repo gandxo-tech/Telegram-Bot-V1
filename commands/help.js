@@ -10,7 +10,6 @@ module.exports = (bot) => {
             { command: '/start', description: 'démarrage du bot' },
             { command: '/getid', description: 'Obtenez votre ID Telegram' },
             { command: '/imgbb', description: 'transforme les photos en lien' },
-            { command: '/ytb', description: 'recerche YouTube ' },
        
         ];
 
