@@ -5,12 +5,6 @@
 ### Telegram Bot V1
 dossier pour les Bots télégram version 1 créer par <a href="https://www.facebook.com/profile.php?id=100084606198768" target="_blank">RONALD SORY ホ</a>
 
-#### essayé mon bot 
-<div align="center">
-  <a href="https://t.me/Ronald_Shika_chat_bot" target="_blank">
-    <img src="https://i.ibb.co/b6VyHyz/image.jpg" alt="Pagebot Cover" width="500"/>
-  </a>
-</div>
 ### TUTORIEL
 
 ## Étape 1 : Créer et obtenez le token de votre bot Telegram
