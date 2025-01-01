@@ -4,7 +4,6 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 
-// Lecture du token à partir du fichier account.dev.txt
 const tokenPath = path.resolve(__dirname, 'account.dev.txt');
 const token = fs.readFileSync(tokenPath, 'utf-8').trim();
 
@@ -26,7 +25,6 @@ require('./commands/start')(bot);
 require('./commands/imgbb')(bot);
 require('./commands/getid')(bot);
 
-// Commande générique pour répondre aux questions
 bot.on('text', async (ctx) => {
     const prompt = ctx.message.text;
     const senderId = ctx.from.id;
@@ -48,11 +46,11 @@ bot.on('text', async (ctx) => {
     }
 });
 
-// Configuration du webhook Telegram
+
 bot.telegram.setWebhook(`${URL}/bot${token}`);
 app.use(bot.webhookCallback(`/bot${token}`));
 
-// Démarrer le serveur
+
 app.listen(PORT, () => {
     console.log(`Bot lancé avec succès sur : ${URL}`);
 });
