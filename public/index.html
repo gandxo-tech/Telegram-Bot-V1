@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden; /* Empêcher le défilement horizontal */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #1c1c1c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #5c9bff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #5c9bff, #a1c4fd);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background-color: #5c9bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #3e7db1;
+        }
+
+        #features {
+            background-color: #ffffff;
+            padding: 60px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        #features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature {
+            background-color: #f4f7fb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateX(100%); /* Initialement déplacé vers la droite */
+            transition: all 0.7s ease-out;
+        }
+
+        .feature.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .feature h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature p {
+            font-size: 1.1rem;
+        }
+
+        #contact {
+            background-color: #f4f7fb;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        #contact a {
+            background-color: #5c9bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact a:hover {
+            background-color: #3e7db1;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Telegram Bot</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/SoryRonald/Telegram-Bot-V1">Github</a></li>
+                    
+                    <li><a href="https://t.me/RonaldAlexandreSory">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section hero">
+        <div class="container">
+            <h2>Rencontrez votre assistant personnel Telegram</h2>
+            <p>Découvrez une communication fluide avec notre bot Telegram. Disponible 24h/24 et 7j/7 pour répondre à vos questions, automatiser des tâches, et bien plus encore.</p>
+            <a href="https://t.me/ronald_chatbot_bot" target="_blank" class="cta-button">Discuter maintenant</a>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="container">
+            <h2>Fonctionnalités</h2>
+            <div class="feature-list">
+                <div class="feature animate-on-scroll">
+                    <h3>Réponses instantanées</h3>
+                    <p>Obtenez des réponses immédiates à tout moment de la journée.</p>
+                </div>
+                <div class="feature animate-on-scroll">
+                    <h3>Intégration intelligente</h3>
+                    <p>Intégrez divers services pour améliorer la productivité et rationaliser les flux de travail.</p>
+                </div>
+                <div class="feature animate-on-scroll">
+                    <h3>Facile à utiliser</h3>
+                    <p>Interface simple et intuitive pour une navigation sans effort.</p>
+                </div>
+                <div class="feature animate-on-scroll">
+                    <h3>Sécurisé & Privé</h3>
+                    <p>Votre vie privée est notre priorité. Nous garantissons que toutes vos données sont protégées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Telegram Bot V1.</p>
+        </div>
+    </footer>
+
+    <script>
+        function isElementInView(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top <= window.innerHeight && rect.bottom >= 0;
+        }
+
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach((element) => {
+                if (isElementInView(element)) {
+                    element.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScrollAnimations);
+        document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+    </script>
+</body>
+  </html>
