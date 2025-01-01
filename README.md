@@ -14,7 +14,7 @@ dossier pour les Bots télégram version 1 créer par <a href="https://www.faceb
 ## Étape 1 : Créer et obtenez le token de votre bot Telegram
  **Créer un bot Telegram:**
    - ouvrez Telegram et créer un bot grâce à deux bots Telegram
-     - **Bot 1:** `many chat`
+     - **Bot 1:** `Manybot`
      - **Bot 2:** `BotFather`
    - Tutoriels de la création d'un bot telegram:
      - <a href="https://www.facebook.com/share/v/15ca2B7At6/" target="_blank">Vidéo de la création d'un bot telegram</a> ☺️
