@@ -1,3 +1,8 @@
+module.exports = {
+    log: message => console.log(`[LOG] ${message}`),
+    error: message => console.error(`[ERREUR] ${message}`),
+};
+
 const { Telegraf } = require('telegraf');
 const fs = require('fs');
 const express = require('express');
@@ -16,6 +21,12 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 const URL = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 require('./commands/ai')(bot);
 require('./commands/admin')(bot);
@@ -46,11 +57,22 @@ bot.on('text', async (ctx) => {
     }
 });
 
-
 bot.telegram.setWebhook(`${URL}/bot${token}`);
 app.use(bot.webhookCallback(`/bot${token}`));
 
-
 app.listen(PORT, () => {
-    console.log(`Bot lancé avec succès sur : ${URL}`);
+    console.log(`
+0%   ▒▒▒▒▒▒▒▒▒▒
+10%  █▒▒▒▒▒▒▒▒▒
+20%  ██▒▒▒▒▒▒▒▒
+30%  ███▒▒▒▒▒▒▒
+40%  ████▒▒▒▒▒▒
+50%  █████▒▒▒▒▒
+60%  ██████▒▒▒▒
+70%  ███████▒▒▒
+80%  ████████▒▒
+90%  █████████▒
+100% ██████████
+✅ Made by RONALD SORY ホ 
+✅ Bot lancé avec succès sur : ${URL}`);
 });
