@@ -73,6 +73,6 @@ app.listen(PORT, () => {
 80%  ████████▒▒
 90%  █████████▒
 100% ██████████
-✅ Made by RONALD SORY ホ 
+✅ Made by GANDXO (GBAGUIDI Exaucé)
 ✅ Bot lancé avec succès sur : ${URL}`);
 });
