@@ -26,7 +26,7 @@ module.exports = (bot) => {
 
     bot.command('addadmin', (ctx) => {
         if (ctx.from.id != config.admin_id) {
-            return ctx.reply('❌ Seul l\'administrateur principal peut ajouter d\'autres administrateurs.');
+            return ctx.reply('❌ Seul l\'administrateur principal GANDXO peut ajouter d\'autres administrateurs.');
         }
 
         const args = ctx.message.text.split(' ').slice(1);
