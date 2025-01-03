@@ -1,8 +1,6 @@
 const axios = require('axios');
+{ command: '/weather', description: 'Faire part de la météo d'une ville' },
 
-module.exports = {
-  name: 'weather', 
-  description: 'Affiche la météo pour une ville donnée',
   execute(bot, msg, args) {
     
     const city = args.join(' city'); // Combine les mots après /weather comme une ville
