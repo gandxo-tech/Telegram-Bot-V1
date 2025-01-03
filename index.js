@@ -35,6 +35,7 @@ require('./commands/translate')(bot);
 require('./commands/start')(bot);
 require('./commands/imgbb')(bot);
 require('./commands/getid')(bot);
+réduire ('./commands/weather')(bot);
 
 bot.on('text', async (ctx) => {
     const prompt = ctx.message.text;
