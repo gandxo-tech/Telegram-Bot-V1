@@ -1,4 +1,4 @@
-module.exports = {
+tumodule.exports = {
     log: message => console.log(`[LOG] ${message}`),
     error: message => console.error(`[ERREUR] ${message}`),
 };
@@ -35,7 +35,7 @@ require('./commands/translate')(bot);
 require('./commands/start')(bot);
 require('./commands/imgbb')(bot);
 require('./commands/getid')(bot);
-réduire ('./commands/weather')(bot);
+require ('./commands/weather')(bot);
 
 bot.on('text', async (ctx) => {
     const prompt = ctx.message.text;
