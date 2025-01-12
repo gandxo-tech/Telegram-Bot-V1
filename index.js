@@ -116,4 +116,4 @@ app.listen(PORT, () => {
 100% ██████████
 ✅ Made by GANDXO (GBAGUIDI Exaucé)
 ✅ Bot lancé avec succès sur : ${URL}`);
-})
+});
